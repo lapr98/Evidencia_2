@@ -14,7 +14,6 @@ ARCHITECTURE controller OF LCD IS
   TYPE CONTROL IS(power_up, initialize, WRT, SEND1, SEND2, SEND3, SEND4, CLR);-- ESTADOS A UTILIZAR
   SIGNAL    state      : CONTROL;
   CONSTANT  freq       : INTEGER := 50; --Frecuencia de reloj del sistema
-  signal M1,M2, M3, M4 :STD_LOGIC_VECTOR(7 DOWNTO 0);
 BEGIN
   PROCESS(clk)
     VARIABLE clk_count : INTEGER := 0; --CONTADOR PARA RETARDOS 
